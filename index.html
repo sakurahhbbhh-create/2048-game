@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#faf8ef">
+  <title>2048</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>2048</h1>
+      <div class="scores">
+        <div class="score-box">
+          <span class="label">分数</span>
+          <span class="value" id="score">0</span>
+        </div>
+        <div class="score-box">
+          <span class="label">最高分</span>
+          <span class="value" id="best">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <p class="tip">方向键 / <b>WASD</b> 或滑动屏幕来移动方块，合并相同数字！</p>
+      <div class="buttons">
+        <button id="new-game">新游戏</button>
+        <button id="undo">撤销</button>
+      </div>
+    </div>
+
+    <div id="board" class="board">
+      <!-- 16 个背景格由 JS 生成 -->
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h2 id="overlay-title"></h2>
+      <p id="overlay-sub"></p>
+      <div class="overlay-buttons">
+        <button id="overlay-continue" class="hidden">继续游戏</button>
+        <button id="overlay-restart">再来一局</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
