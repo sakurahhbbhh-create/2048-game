@@ -176,7 +176,7 @@ if (typeof document !== 'undefined') {
     // 刷新方块 DOM 的内容与位置；可传入 value 覆盖显示值（合并动画用）
     function refreshTileDiv(tile, div, row, col, value) {
       const v = value == null ? tile.value : value;
-      const inner = div.querySelector('.tile-inner');
+      const inner = div.firstElementChild;
       const { x, y, size } = cellPos(row == null ? tile.row : row, col == null ? tile.col : col);
       inner.textContent = v;
       inner.className = 'tile-inner ' + tileClass(v);
@@ -190,6 +190,7 @@ if (typeof document !== 'undefined') {
       const div = document.createElement('div');
       div.className = 'tile';
       const inner = document.createElement('div');
+      inner.className = 'tile-inner';
       div.appendChild(inner);
       board.appendChild(div);
       tileDivs.set(tile.id, div);
@@ -324,7 +325,7 @@ if (typeof document !== 'undefined') {
           if (keepDiv) {
             refreshTileDiv(m.keep, keepDiv);
             keepDiv.style.zIndex = '1';
-            const inner = keepDiv.querySelector('.tile-inner');
+            const inner = keepDiv.firstElementChild;
             inner.classList.remove('pop');
             void inner.offsetWidth;
             inner.classList.add('pop');
