@@ -1,10 +1,9 @@
-# 2048 🎮
+# 2048游戏
 
 一个用原生 **HTML / CSS / JavaScript** 实现的 2048 游戏，零依赖，打开即可玩。
 
-🔗 在线试玩：<https://sakurahhbbhh-create.github.io/2048-game/>
-
-📦 离线版下载：<https://github.com/sakurahhbbhh-create/2048-game/releases>（双击 exe 即玩，无需浏览器和网络）
+在线试玩：<https://sakurahhbbhh-create.github.io/2048-game/>
+离线版下载：<https://github.com/sakurahhbbhh-create/2048-game/releases>（双击 exe 即玩，无需浏览器和网络）
 
 ## 🎯 玩法
 
