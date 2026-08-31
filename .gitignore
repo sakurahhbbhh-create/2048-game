@@ -1,0 +1,6 @@
+# Python / PyInstaller 构建产物
+__pycache__/
+build/
+dist/
+*.spec
+portable/2048.html
